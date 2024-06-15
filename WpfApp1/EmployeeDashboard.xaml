@@ -44,7 +44,7 @@
                 <TextBlock Text="SAVE" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
             </Button>
             <Button Width="100" Height="28" Margin="20" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="ExitButton_Click">
-                <TextBlock Text="EXIT" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="EXIT" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
             </Button>
         </StackPanel>
     </Grid>
