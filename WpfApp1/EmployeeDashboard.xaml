@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp1.EmployeeDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Employee Dashboard" Height="450" Width="800">
+    <Grid Background="#F0F8FF">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="20" FontWeight="Bold">Employee Dashboard</TextBlock>
+        <UniformGrid Columns="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40,0,0">
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6"  Click="AddEmployeeButton_Click">
+                <TextBlock Text="ADD EMPLOYEE" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="AddSectionToLibButton_Click">
+                <TextBlock Text="ADD SECTION TO LIB" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6"  Click="CreateSectionButton_Click">
+                <TextBlock Text="CREATE SECTION" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="AddAuthorButton_Click">
+                <TextBlock Text="ADD AUTHOR" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="AddBookButton_Click">
+                <TextBlock Text="ADD BOOK" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="AddMemberButton_Click">
+                <TextBlock Text="ADD MEMBER" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"><Run Text="CONN AUTHOR"/><Run Language="pl-pl" Text="&amp;"/><Run Text="BOOK"/></TextBlock>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="RemoveMemberButton_Click">
+                <TextBlock Text="REMOVE MEMBER" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="RemoveBorrowButton_Click">
+                <TextBlock Text="REMOVE BORROW" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="BookBorrowButton_Click">
+                <TextBlock Text="BORROW BOOK" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="150" Height="50" Margin="10" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="ShowallBooksButton_Click">
+                <TextBlock Text="SHOW BOOKS" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+        </UniformGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,362,0,0" Height="71">
+            <Button Width="100" Height="28" Background="#E0F7FF" BorderBrush="#ADD8E6">
+                <TextBlock Text="SAVE" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+            <Button Width="100" Height="28" Margin="20" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="ExitButton_Click">
+                <TextBlock Text="EXIT" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
