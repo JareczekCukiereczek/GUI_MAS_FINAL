@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp1.View.RemoveMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Remove Member" Height="450" Width="800">
+    <Grid Background="#F0F8FF">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" FontSize="20" FontWeight="Bold">Remove Member</TextBlock>
+
+        <!-- Lista członków -->
+        <ListView Name="MembersListView" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,10" Height="200" Width="700">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Membership ID" DisplayMemberBinding="{Binding MembershipID}" Width="100" />
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Human.Name}" Width="150" />
+                    <GridViewColumn Header="Surname" DisplayMemberBinding="{Binding Human.Surname}" Width="150" />
+                    <GridViewColumn Header="Year" DisplayMemberBinding="{Binding Human.Year}" Width="100" />
+                    <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Human.Address}" Width="200" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,280,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Right" Text="Membership ID:" FontWeight="Bold"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Width="200" Height="30" Margin="10" Name="MembershipIDTextBox"/>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+                <Button Width="100" Height="50" Margin="20" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="RemoveButton_Click">
+                    <TextBlock Text="REMOVE" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </Button>
+                <Button Width="100" Height="50" Margin="20" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="ExitButton_Click">
+                    <TextBlock Text="EXIT" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

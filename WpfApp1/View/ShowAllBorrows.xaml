@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.View.ShowAllBorrows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Show All Borrows" Height="450" Width="800">
+    <Grid>
+        <ListView Name="BorrowsListView">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Member Name" DisplayMemberBinding="{Binding Member.Human.Name}" />
+                    <GridViewColumn Header="Member Surname" DisplayMemberBinding="{Binding Member.Human.Surname}" />
+                    <GridViewColumn Header="Book Title" DisplayMemberBinding="{Binding LibraryObject.Title}" />
+                    <GridViewColumn Header="Borrow Date" DisplayMemberBinding="{Binding BorrowDate}" />
+                    <GridViewColumn Header="Borrow ID" DisplayMemberBinding="{Binding BorrowID}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,10">
+            <Button Width="100" Height="28" Background="#E0F7FF" BorderBrush="#ADD8E6" Click="ExitButton_Click">
+                <TextBlock Text="EXIT" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

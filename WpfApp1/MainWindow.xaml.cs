@@ -4,11 +4,11 @@ using System.Windows;
 using System.Windows.Controls;
 using WpfApp1;
 
-namespace WpfApp1
+namespace WpfApp1.View
 {
     public partial class MainWindow : Window
     {
-        private List<EmployeeMember> employees = new List<EmployeeMember>();
+       
 
         public MainWindow()
         {
