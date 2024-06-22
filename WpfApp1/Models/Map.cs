@@ -37,6 +37,7 @@ namespace WpfApp1.Models
             Map map = new Map(paperObject, scale, mapLegend);
             paperObject.AddMapShowDynamicInher(map);
         }
+        
 
 
     }

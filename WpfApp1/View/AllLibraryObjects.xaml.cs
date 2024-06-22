@@ -17,13 +17,11 @@ namespace WpfApp1.View
 
         private void FindButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement your find logic here
-            MessageBox.Show("Find button clicked");
+            MessageBox.Show("button clicked");
         }
 
         private void SelectButton_Click(object sender, RoutedEventArgs e)
         {
-            // Implement your select logic here
             MessageBox.Show("Select button clicked");
         }
 

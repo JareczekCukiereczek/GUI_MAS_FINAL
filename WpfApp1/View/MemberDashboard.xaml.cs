@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for MemberDashboard.xaml
-    /// </summary>
     public partial class MemberDashboard : Window
     {
         public MemberDashboard()

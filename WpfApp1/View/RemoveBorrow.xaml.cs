@@ -33,7 +33,7 @@ namespace WpfApp1.View
                     borrowsMember.Remove(borrowToRemove);
                     SaveBorrowsToFile(borrows);
                     SaveBorrowsToFileMember(borrowsMember);
-                    MessageBox.Show("Borrow removed successfully!");
+                    MessageBox.Show("Borrow removed successfuly!");
                     BorrowsListView.ItemsSource = borrows; 
                 }
                 else
@@ -43,7 +43,7 @@ namespace WpfApp1.View
             }
             else
             {
-                MessageBox.Show("Please enter a valid Borrow ID.");
+                MessageBox.Show("Please enter a valid BorrowID.");
             }
         }
 

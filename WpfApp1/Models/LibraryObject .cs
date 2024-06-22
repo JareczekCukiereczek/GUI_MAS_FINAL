@@ -43,12 +43,7 @@ namespace WpfApp1.Models
 
         public int DaysUntilDeadline => (int)(SalesDeadline - AddedDate).TotalDays;
 
-        private LibraryObject()
-        {
-
-        }
-
-
+        protected LibraryObject() { }
 
 
         public LibraryObject(string title)
@@ -88,6 +83,7 @@ namespace WpfApp1.Models
             typeObject = null;
             AllTypeObjects.Remove(typeObject);
         }
-     }
+        
+    }
 }
 

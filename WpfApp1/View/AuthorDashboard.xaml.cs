@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for AuthorDashboard.xaml
-    /// </summary>
     public partial class AuthorDashboard : Window
     {
         public AuthorDashboard()

@@ -32,6 +32,7 @@ namespace WpfApp1.Models
             Book book = new Book(paperObject, coverType, shortSummary);
             paperObject.AddBookShowDynamicInher(book);
         }
+        
     }
 }
 

@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for AddEmployee.xaml
-    /// </summary>
     public partial class AddEmployee : Window
     {
         public AddEmployee()

@@ -79,8 +79,8 @@ namespace WpfApp1.Services
                 Console.WriteLine(library);
             }
             //========================================================================================================PaperObject-Book
-            PaperObject paperObject1 = new PaperObject("A4");
-            PaperObject paperObject2 = new PaperObject("A3");
+            PaperObject paperObject1 = new PaperObject("Test0", "A4");
+            PaperObject paperObject2 = new PaperObject("Test2", "A3");
 
             List<PaperObject> paperObjectsBooks = new List<PaperObject>();
 
@@ -100,8 +100,8 @@ namespace WpfApp1.Services
 
             //========================================================================================================PaperObject-Maps
 
-            PaperObject paperObject3 = new PaperObject("A2");
-            PaperObject paperObject4 = new PaperObject("A1");
+            PaperObject paperObject3 = new PaperObject("Testcik", "A2");
+            PaperObject paperObject4 = new PaperObject("Test4", "A1");
 
             List<PaperObject> paperObjectsMap = new List<PaperObject>();
             paperObjectsMap.Add(paperObject3); 
@@ -130,7 +130,7 @@ namespace WpfApp1.Services
 
             //========================================================================================================Dynamic
             Console.WriteLine("Dziedziczenie dynamiczne");
-            PaperObject paperObject = new PaperObject("A4");
+            PaperObject paperObject = new PaperObject("Test1","A4");
 
             Book.AddBookToPaperObject(paperObject, "Hardcover", "Podusmowanie");
             //zamiana na mape
@@ -149,12 +149,32 @@ namespace WpfApp1.Services
             TypeObject.createFantaObTech("daily", libek2, charact,Setting.ImagineLands);
 
 
+            //=========================================================================================================Wieloaskept
+            LibraryObject libek2wieloaspekt = new LibraryObject("wieloaspekt");
+            PaperObject ppp = new PaperObject("Test","A5");//aspektem PaperObject
+            TypeObject.createFantaObTech("monthly", ppp, charact, Setting.ImagineLands);//aspekt TypeObject
 
 
 
+            //=========================================================================================================Wielodziedziczenie
 
-            //========================================================================================================Polimofizm
+            Human humek = new Human("Testowy", "Testowy1", 2000, "Bielany", Gender.Male);
+            EmployeeMember employeeMember = new EmployeeMember(humek, "009");
+            Human pisarz = new Human("Testowy1", "Testowy2", 2001, "Bielany", Gender.Female);
+            Author autorek = new Author(pisarz, "Andrzej", "nowak", 20001, "Wola", Gender.Female);
+            employeeMember.AddAuthor(autorek);// metoda z employee
+            Library biblioteczka = new Library("Bemowska");
+            employeeMember.addLibrary(biblioteczka);//metoda z member
 
+
+            //=========================================================================================================Polimofrizm
+            Human humanek = new Human("Trans","Test",2005,"Praga",Gender.Female);
+
+            Member member = new Member(human, "M001");
+            
+            EmployeeMember employeeMember10 = new EmployeeMember(human, "EM001");
+            Console.WriteLine("Typ obiektu Member: " + member.GetObjectType());
+            Console.WriteLine("Typ obiektu EmployeeMember: " + employeeMember.GetObjectType());
 
         }
 

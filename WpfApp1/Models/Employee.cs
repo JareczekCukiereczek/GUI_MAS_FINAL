@@ -221,5 +221,10 @@ namespace WpfApp1.Models
             string json = JsonConvert.SerializeObject(members, Formatting.Indented);
             File.WriteAllText(MembersFilePath, json);
         }
+
+        public string GetObjectType()
+        {
+            return this.GetType().Name;
+        }
     }
 }

@@ -93,14 +93,14 @@ namespace WpfApp1.View
 
             if (selectedAuthor == null || selectedBook == null)
             {
-                MessageBox.Show("Please select an author and a book.");
+                MessageBox.Show("Please select authora and a booka.");
                 return;
             }
 
             selectedAuthor.setBook(selectedBook);
             SaveAuthorBookConnectionToFile(selectedAuthor, selectedBook);
 
-            MessageBox.Show("Author and book connected successfully!");
+            MessageBox.Show("Authorek and book connected successfuly!");
 
             EmployeeDashboard emp = new EmployeeDashboard();
             emp.Show();

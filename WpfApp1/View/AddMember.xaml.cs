@@ -28,7 +28,7 @@ namespace WpfApp1.View
          
                 if (!int.TryParse(YearTextBox.Text.Trim(), out int year) || year > 2024)
                 {
-                    MessageBox.Show("Year must be a valid number and cannot be greater than 2024.");
+                    MessageBox.Show("Year cannot be greater than 2024.");
                     return;
                 }
 
@@ -59,11 +59,11 @@ namespace WpfApp1.View
                 members.Add(member);
                 SaveMembersToFile(members);
 
-                MessageBox.Show("Member added successfully!");
+                MessageBox.Show("Member added successfuly!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error");
             }
         }
 

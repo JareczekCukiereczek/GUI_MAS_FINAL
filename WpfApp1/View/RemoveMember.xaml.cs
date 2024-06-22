@@ -32,8 +32,8 @@ namespace WpfApp1.View
                     members.Remove(memberToRemove);
                     SaveMembersToFile(members);
                     RemoveMemberBorrows(memberToRemove);
-                    MessageBox.Show("Member and associated borrows removed successfully!");
-                    MembersListView.ItemsSource = members; // Aktualizuj listę
+                    MessageBox.Show("Member and asocjacje borrows removed!");
+                    MembersListView.ItemsSource = members;
                 }
                 else
                 {

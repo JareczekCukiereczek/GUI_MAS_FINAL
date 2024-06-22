@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for MemberCheck.xaml
-    /// </summary>
     public partial class MemberCheck : Window
     {
         public MemberCheck()

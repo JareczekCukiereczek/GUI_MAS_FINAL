@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for CreateSection.xaml
-    /// </summary>
     public partial class CreateSection : Window
     {
         public CreateSection()

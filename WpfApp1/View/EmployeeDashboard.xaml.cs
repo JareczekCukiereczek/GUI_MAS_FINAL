@@ -15,9 +15,6 @@ using WpfApp1.View;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for EmployeeDashboard.xaml
-    /// </summary>
     public partial class EmployeeDashboard : Window
     {
         public EmployeeDashboard()

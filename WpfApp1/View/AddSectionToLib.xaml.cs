@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1.View
 {
-    /// <summary>
-    /// Interaction logic for AddSectionToLib.xaml
-    /// </summary>
     public partial class AddSectionToLib : Window
     {
         public AddSectionToLib()

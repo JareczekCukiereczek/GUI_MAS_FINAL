@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace WpfApp1.Models
 {
    
-    public class PaperObject
+    public class PaperObject : LibraryObject
     {
         public string Format { get; set; }
         public Book Book { get; set; }
@@ -16,7 +16,7 @@ namespace WpfApp1.Models
         
         private PaperObject() { }   
 
-        public PaperObject(string format)
+        public PaperObject(string title,string format):base(title)
         {
             Format = format;
 
@@ -97,9 +97,8 @@ namespace WpfApp1.Models
             }
             RemoveMap(Map);
             Book.AddBookToPaperObject(this, coverType, shortSummary);
-
-
         }
+        
 
     }
 }
