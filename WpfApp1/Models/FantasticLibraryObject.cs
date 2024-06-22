@@ -20,6 +20,11 @@ namespace WpfApp1.Models
         public Setting WorldSetting { get; set; } //enum z wyborem miejsca
         private TypeObject TypeObject;
 
+        private FantasticLibraryObject()
+        {
+
+        }
+
 
         //dziedz.wieloaspekt
         private FantasticLibraryObject(TypeObject typeObject, List<string> maincharacters, Setting worldsetting)

@@ -36,7 +36,7 @@ namespace WpfApp1.Models
         public static List<Author> authors = new List<Author>();
         public static List<Employee> employees = new List<Employee>();
 
-
+        private Human() { }
 
 
         //overlapping

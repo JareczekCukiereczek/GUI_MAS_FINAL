@@ -17,7 +17,10 @@ namespace WpfApp1.Models
         private TechnicalLibraryObject TechnicalLibraryObject;
         private FantasticLibraryObject FantasticLibraryObject;
 
+        private TypeObject()
+        {
 
+        }
 
         private TypeObject(LibraryObject libraryobject,String publicationFrequency)
         {
@@ -25,16 +28,29 @@ namespace WpfApp1.Models
         }
         //dziedzicz.wieloaspektowe - kompozycja do LibraryObject
 
-        public static void createTypeObjectInhMultiAspect(string publicationFrequency, LibraryObject libraryobject)
+        public static void createTechObTech( string publicationFrequency, LibraryObject libraryobject, string specialization, TechnicalLevel technicalLevel)
         {
             if (libraryobject == null)
             {
                 throw new Exception("TypeObject can't be empty");
             }
-            TypeObject typeObject = new TypeObject(libraryobject,publicationFrequency);
+            TypeObject typeObject = new TypeObject(libraryobject, publicationFrequency);
             libraryobject.AddPartToInheritanceMultiAspect(typeObject);
-        }
+            TechnicalLibraryObject.addTechnicalToTypeObject(typeObject, "spec", TechnicalLevel.Advanced);
+            
 
+        }
+        public static void createFantaObTech( string publicationFrequency, LibraryObject libraryobject,List<string> maincharacters, Setting worldsetting)
+        {
+            if (libraryobject == null)
+            {
+                throw new Exception("TypeObject can't be empty");
+            }
+            TypeObject typeObject = new TypeObject(libraryobject, publicationFrequency);
+            libraryobject.AddPartToInheritanceMultiAspect(typeObject);
+            FantasticLibraryObject.addFantasticToTypeObject(typeObject, maincharacters, worldsetting);
+            
+        }
 
 
 

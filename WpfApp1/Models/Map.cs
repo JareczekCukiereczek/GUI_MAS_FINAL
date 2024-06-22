@@ -19,6 +19,8 @@ namespace WpfApp1.Models
 
         public PaperObject paperObject { get; set; }
 
+        private Map() { }   
+
         //dynamic dziedziczenie - te 2 konstruktory
         private Map(PaperObject paperObject, string scale, Legend mapLegend)
         {

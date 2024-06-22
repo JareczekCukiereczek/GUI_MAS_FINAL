@@ -14,7 +14,7 @@ namespace WpfApp1.Models
         public Book Book { get; set; }
         public Map Map { get; set; }
         
-
+        private PaperObject() { }   
 
         public PaperObject(string format)
         {

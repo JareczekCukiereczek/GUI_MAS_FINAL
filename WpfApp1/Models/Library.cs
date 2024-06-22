@@ -2,24 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace WpfApp1.Models
 {
     public class Library
     {
-        private string Name { get; set; }
+        public string Name { get; set; }
+        [JsonProperty]
         public string Address { get; set; }
         public const int MAX_NUMBER_OF_SECTIONS = 5;
 
-
+        [JsonProperty]
         private Dictionary<string, Member> Members { get; set; } // Kwalifikowana asocjacja -  przez MembershipID
+        [JsonProperty]
         private List<Section> Sections { get; set; } // Kompozycja - biblioteka składa się z wielu sekcji, a sekcje nie mogą istnieć bez biblioteki.
+        
         private static List<Section> allSections { get; set; } = new List<Section>();//Kompozycja - wszystkie nasze sekcje
 
         private List<Borrow> borrows;
 
+        private Library()
+        {
 
+        }
+        
         public Library(string name)
         {
             Name = name;

@@ -14,6 +14,9 @@ namespace WpfApp1.Models
 
         public PaperObject paperObject { get; set; }
 
+        private Book() { }
+
+
         //dynamic dziedziczenie - kompozycja
         private Book(PaperObject paperObject,string coverType,string shortSummary) 
         {

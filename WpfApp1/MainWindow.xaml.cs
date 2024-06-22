@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp1;
+using WpfApp1.Services;
 
 namespace WpfApp1.View
 {
@@ -13,6 +14,7 @@ namespace WpfApp1.View
         public MainWindow()
         {
             InitializeComponent();
+            Program.X();
         }
 
         private void MemberButton_Click(object sender, RoutedEventArgs e)
@@ -35,6 +37,8 @@ namespace WpfApp1.View
             authorDashboard.Show();
             this.Close();
         }
+
+
 
     }
 }

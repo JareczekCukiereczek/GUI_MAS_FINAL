@@ -19,9 +19,10 @@ namespace WpfApp1.Models
         private const string AuthorsFilePath = "authorsEmployeeExtension.json";
         private const string LibraryObjectsFilePath = "library_objectsEmployeeExtension.json";
         private const string BooksFilePath = "booksEmployeeExtension.json";
+        private Employee() { }
 
         //dziedziczenie z nadklasy
-        private Employee(Human human, int employeeID, int salary, string name, string surname, int year, string address, Gender gender)
+        private Employee(Human human, int employeeID, int salary)
         {
             Human = human;
             EmployeeID = employeeID;
@@ -30,13 +31,13 @@ namespace WpfApp1.Models
         }
 
         //overlapping - kompozycja
-        public static void CreatePartOfEmployeeShowOverlapping(Human human, int employeeID, int salary, string name, string surname, int year, string address, Gender gender)
+        public static void CreatePartOfEmployeeShowOverlapping(Human human, int employeeID, int salary)
         {
             if (human == null)
             {
                 throw new Exception("Human couldnt be null");
             }
-            Employee emp = new Employee(human, employeeID, salary, name, surname, year, address, gender);
+            Employee emp = new Employee(human, employeeID, salary);
             human.addEmployeePart(emp);
         }
 

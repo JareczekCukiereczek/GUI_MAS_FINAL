@@ -18,7 +18,10 @@ namespace WpfApp1.Models
         public TechnicalLevel TechLevel { get; set; }//enum do wyboru
         private TypeObject TypeObject { get; set; }
 
+        private TechnicalLibraryObject()
+        {
 
+        }
         //dziedz.wieloaspekt + kompozycja do TypeObject
         private TechnicalLibraryObject(TypeObject typeobject, string specialization, TechnicalLevel technicalLevel)
         {

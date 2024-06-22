@@ -10,20 +10,20 @@ namespace WpfApp1.Models
     public class LibraryObject
     {
 
-        public string Title { get; set; }
+        public string Title { get; set; }//atrybut złożony
         public int NumberOfPages { get; set; }
         public string Type { get; set; }
 
-        public string ISBN { get; set; }
-        public string? Illustration { get; set; }
-        public double? Rating { get; set; }
-        public List<string> Languages { get; set; } = new List<string>();
+        public string ISBN { get; set; }//atrybut obiektowy
+        public string? Illustration { get; set; }//opcjonalny
+        public double? Rating { get; set; }//opcjonalny
+        public List<string> Languages { get; set; } = new List<string>();//atrybut powtarzalny
         public bool? Available { get; set; }
 
         private List<Borrow> Borrows { get; set; } // Lista wypożyczeń
 
 
-        public Author Author { get; set; } //dodac polaczenie zwrotne
+        public Author Author { get; set; } 
 
         public TypeObject TypeObject { get; set; }
 
@@ -43,6 +43,10 @@ namespace WpfApp1.Models
 
         public int DaysUntilDeadline => (int)(SalesDeadline - AddedDate).TotalDays;
 
+        private LibraryObject()
+        {
+
+        }
 
 
 
